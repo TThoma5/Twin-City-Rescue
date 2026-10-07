@@ -1,0 +1,265 @@
+/* =====================================================================
+   Twin Cities Animal Rescue — Touchstone 3 Stylesheet
+   Mobile-first · Flexbox layout · 4 colors · 2 fonts
+   ===================================================================== */
+
+/* ---------- Design tokens ---------- */
+:root {
+  --color-green: #2f6f4e;        /* primary — growth, care, trust */
+  --color-green-dark: #245a3f;  /* depth / hover */
+  --color-amber: #e8a33d;        /* accent — warmth, hope */
+  --color-cream: #faf6ef;        /* page background */
+  --color-ink: #2d2a26;          /* body text */
+  --color-muted: #6b6357;       /* secondary text */
+  --color-white: #ffffff;
+
+  --font-heading: "Merriweather", Georgia, "Times New Roman", serif;
+  --font-body: "Open Sans", system-ui, -apple-system, sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --radius: 8px;
+  --max-width: 1100px;
+}
+
+/* ---------- Base / reset ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background-color: var(--color-cream);
+}
+
+img, video, picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a { color: var(--color-green-dark); }
+a:hover { color: var(--color-amber); }
+
+/* ---------- Layout container ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+section {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-green);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; margin-bottom: var(--space-sm); }
+h3 { font-size: 1.15rem; color: var(--color-green-dark); }
+
+p { margin: 0 0 var(--space-sm); }
+
+ul, ol { padding-left: 1.25rem; margin: 0 0 var(--space-sm); }
+li { margin-bottom: var(--space-xs); }
+
+strong { color: var(--color-green-dark); }
+
+/* ---------- Header & navigation ---------- */
+header {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  padding: var(--space-md);
+}
+
+header img {
+  max-height: 64px;
+  width: auto;
+  margin: 0 auto var(--space-sm);
+}
+
+header h1 {
+  color: var(--color-white);
+  text-align: center;
+  margin: 0 0 var(--space-sm);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0;
+  margin: 0;
+}
+
+header nav li { margin: 0; }
+
+header nav a {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+header nav a:hover,
+header nav a[aria-current="page"] {
+  background-color: var(--color-amber);
+  color: var(--color-ink);
+}
+
+/* ---------- Figures & media ---------- */
+figure { margin: var(--space-sm) 0; }
+figcaption {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  padding-top: var(--space-xs);
+  font-style: italic;
+}
+
+video { border-radius: var(--radius); }
+
+/* ---------- Forms ---------- */
+form { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+fieldset {
+  border: 2px solid var(--color-green);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  margin: 0 0 var(--space-sm);
+}
+
+legend {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-green-dark);
+  padding: 0 var(--space-xs);
+}
+
+fieldset fieldset {
+  border: 1px solid var(--color-amber);
+  margin-top: var(--space-sm);
+}
+
+label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #c9c2b5;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background-color: var(--color-white);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--color-amber);
+  border-color: var(--color-green);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* checkbox / radio option lists */
+fieldset ul {
+  list-style: none;
+  padding-left: 0;
+}
+fieldset ul li { margin-bottom: var(--space-xs); }
+
+button {
+  font-family: var(--font-body);
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+button[type="submit"]:hover { background-color: var(--color-green-dark); }
+
+button[type="reset"] {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  border: 1px solid #c9c2b5;
+}
+button[type="reset"]:hover { background-color: #efe7d8; }
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0;
+  margin-top: var(--space-sm);
+}
+
+footer a { color: var(--color-white); }
+footer a:hover { color: var(--color-amber); }
+
+/* ---------- Responsive: larger screens ---------- */
+@media (min-width: 768px) {
+  body { font-size: 1.05rem; }
+
+  /* Header becomes a row: logo left, title center, nav right */
+  header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  header img { margin: 0; }
+  header h1 { text-align: left; margin: 0; flex: 1; font-size: 2rem; }
+  header nav ul { justify-content: flex-end; }
+
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.7rem; }
+
+  main { padding: var(--space-lg); }
+}
+
+@media (min-width: 992px) {
+  /* Two-column contact form rows on wide screens */
+  form > fieldset:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  form > fieldset:first-child > p {
+    flex: 1 1 280px;
+    margin: 0;
+  }
+}

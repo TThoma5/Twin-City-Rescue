@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twin Cities Animal Rescue | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href__="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="rescue-logo_c.png" alt="Twin Cities Animal Rescue logo">
+        <h1>Contact Us</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="intro-heading">
+            <h2 id="intro-heading">Get Involved With Twin Cities Animal Rescue</h2>
+            <p>
+                Whether you are interested in adopting, fostering, volunteering, or simply learning more,
+                we would love to hear from you. Complete the form below and a member of our team will
+                follow up within three business days. All fields marked with an asterisk are required.
+            </p>
+        </section>
+
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Volunteer or Foster Interest Form</h2>
+            <form action="/submit-inquiry" method="post" novalidate>
+                <fieldset>
+                    <legend>Your Contact Information</legend>
+
+                    <p>
+                        <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+                        <input type="text" id="full-name" name="full-name"
+                               required minlength="2" maxlength="80"
+                               autocomplete="name"
+                               placeholder="Jane Doe">
+                    </p>
+
+                    <p>
+                        <label for="email">Email address <span aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email"
+                               required maxlength="100"
+                               autocomplete="email"
+                               placeholder="jane@example.com">
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone number (optional)</label>
+                        <input type="tel" id="phone" name="phone"
+                               pattern="[0-9]{3}[- ]?[0-9]{3}[- ]?[0-9]{4}"
+                               maxlength="14"
+                               autocomplete="tel"
+                               placeholder="612-555-0142">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Interest and Availability</legend>
+
+                    <p>
+                        <label for="interest-type">I am interested in <span aria-hidden="true">*</span></label>
+                        <select id="interest-type" name="interest-type" required>
+                            <option value="">Please select an option</option>
+                            <option value="volunteer">Volunteering my time</option>
+                            <option value="foster">Becoming a foster family</option>
+                            <option value="adoption">Adoption information</option>
+                            <option value="donation">Making a donation</option>
+                            <option value="partnership">Community partnership</option>
+                        </select>
+                    </p>
+
+                    <fieldset>
+                        <legend>Availability <span aria-hidden="true">*</span></legend>
+                        <p>Select all times that apply to you:</p>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="avail-weekday" name="availability" value="weekday">
+                                <label for="avail-weekday">Weekday mornings or afternoons</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="avail-evening" name="availability" value="evening">
+                                <label for="avail-evening">Weekday evenings</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="avail-weekend" name="availability" value="weekend">
+                                <label for="avail-weekend">Weekends</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="avail-flexible" name="availability" value="flexible">
+                                <label for="avail-flexible">Flexible / varies by week</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Experience With Pets <span aria-hidden="true">*</span></legend>
+                        <p>How would you describe your experience with pets?</p>
+                        <ul>
+                            <li>
+                                <input type="radio" id="exp-none" name="experience" value="none" required>
+                                <label for="exp-none">No prior experience, eager to learn</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="exp-some" name="experience" value="some">
+                                <label for="exp-some">Some experience as a pet owner</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="exp-experienced" name="experience" value="experienced">
+                                <label for="exp-experienced">Experienced with rescue or special-needs pets</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="exp-professional" name="experience" value="professional">
+                                <label for="exp-professional">Professional background in animal care</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Message</legend>
+
+                    <p>
+                        <label for="message">Short message <span aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message"
+                                  required minlength="10" maxlength="500"
+                                  rows="5"
+                                  placeholder="Tell us a little about yourself, your home situation, and why you'd like to join our rescue community."></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                        <label for="newsletter">Send me occasional updates and adoption stories by email.</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Submit Inquiry</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+
+        <section aria-labelledby="area-heading">
+            <h2 id="area-heading">Service Area</h2>
+            <p>
+                Twin Cities Animal Rescue serves the seven-county Minneapolis–Saint Paul metropolitan
+                area, including:
+            </p>
+            <ul>
+                <li>Anoka, Carver, Dakota, Hennepin, Ramsey, Scott, and Washington counties.</li>
+                <li>Adoption and foster placements within a 60-mile radius of downtown Minneapolis.</li>
+                <li>Volunteer opportunities available throughout the metro, with remote roles open statewide.</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="hours-heading">
+            <h2 id="hours-heading">Office Hours</h2>
+            <p>
+                Our small office is staffed by volunteers. Inquiries are answered in the order they are
+                received, typically within three business days.
+            </p>
+            <ul>
+                <li>Monday: 10:00 AM &ndash; 4:00 PM</li>
+                <li>Tuesday: 10:00 AM &ndash; 4:00 PM</li>
+                <li>Wednesday: Closed</li>
+                <li>Thursday: 12:00 PM &ndash; 6:00 PM</li>
+                <li>Friday: 10:00 AM &ndash; 2:00 PM</li>
+                <li>Saturday: By appointment for adoption events</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="other-ways-heading">
+            <h2 id="other-ways-heading">Other Ways to Reach Us</h2>
+            <ul>
+                <li>Email: <a href="mailto:hello@twincitiesanimalrescue.org">hello@twincitiesanimalrescue.org</a></li>
+                <li>Phone: (612) 555-0142</li>
+                <li>Mailing address: 1234 Rescue Lane, Minneapolis, MN 55401</li>
+            </ul>
+            <p>
+                <a href="index.html">Return to the homepage</a> or
+                <a href="services.html">explore our services</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Twin Cities Animal Rescue. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
