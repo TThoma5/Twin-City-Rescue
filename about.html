@@ -1,151 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twin Cities Animal Rescue | About</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href__="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Twin Cities Animal Rescue</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+  <header>
+    <div class="container">
+      <a href="index.html">
         <img src="rescue-logo_c.png" alt="Twin Cities Animal Rescue logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
         <h1>About Twin Cities Animal Rescue</h1>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <p>Helping animals find safety, care, and loving homes.</p>
+      </div>
+    </section>
 
-    <main>
-        <section aria-labelledby="story-heading">
-            <h2 id="story-heading">Our Story</h2>
-            <p>
-                Twin Cities Animal Rescue began in 2014 as a small group of neighbors responding to a
-                simple need: too many healthy, adoptable animals were being overlooked in crowded
-                shelters across the Minneapolis–Saint Paul metro. What started with a handful of
-                foster homes and a borrowed transport van has grown into a trusted community rescue
-                serving thousands of animals each year.
-            </p>
-            <p>
-                Today, we operate almost entirely through a network of dedicated foster families and
-                volunteers. Rather than housing animals in a single facility, we place them in real
-                homes where they can heal, relax, and show their true personalities while they wait for
-                a permanent family. This home-based model lets us say yes to animals who need a little
-                extra time, medical care, or patience before they are ready for adoption.
-            </p>
-            <img src="rescue-volunteer_c.png"
-                 alt="A rescue volunteer in a white VOLUNTEER t-shirt kneeling and gently holding a happy golden-brown dog by an outdoor shelter.">
-        </section>
+    <section class="container">
+      <figure>
+        <picture>
+          <source media="(max-width: 600px)" srcset="rescue-feature-small_c.png">
+          <img src="rescue-feature-large_c.png" alt="Volunteers caring for rescue animals">
+        </picture>
+        <figcaption>Our volunteers work together to give animals a second chance.</figcaption>
+      </figure>
 
-        <section aria-labelledby="values-heading">
-            <h2 id="values-heading">Our Core Values</h2>
-            <p>
-                Everything we do is guided by a set of shared commitments that keep our work focused,
-                compassionate, and accountable to the animals and community we serve.
-            </p>
-            <ul>
-                <li>
-                    <h3>Compassion First</h3>
-                    <p>
-                        We treat every animal and every person with patience, dignity, and respect,
-                        recognizing that each arrives with their own story.
-                    </p>
-                </li>
-                <li>
-                    <h3>Community at the Center</h3>
-                    <p>
-                        We believe rescue is a shared responsibility, and we work to make involvement
-                        accessible to neighbors from all backgrounds.
-                    </p>
-                </li>
-                <li>
-                    <h3>Transparency and Trust</h3>
-                    <p>
-                        We are open about how donations are used, how decisions are made, and how
-                        animals are matched with families.
-                    </p>
-                </li>
-                <li>
-                    <h3>Responsible Stewardship</h3>
-                    <p>
-                        We commit our resources where they do the most good, prioritizing the health and
-                        well-being of the animals in our care.
-                    </p>
-                </li>
-            </ul>
-        </section>
+      <h2>Our Mission</h2>
+      <p>Twin Cities Animal Rescue is dedicated to helping animals in need throughout the Minneapolis–Saint Paul area. We provide adoption, fostering, volunteer opportunities, and community support.</p>
 
-        <section aria-labelledby="message-heading">
-            <h2 id="message-heading">A Message From Our Coordinator</h2>
-            <p>
-                Our rescue coordinator recorded a short message for anyone considering adoption,
-                fostering, or volunteering. Hear directly from the team about what your involvement
-                means to the animals in our care.
-            </p>
-            <video controls width="640" poster="rescue-feature-large_c.png">
-                <source src="rescue-message_c.mp4" type="video/mp4">
-                <source src="rescue-message_c.mp3" type="audio/mpeg">
-                <p>
-                    Your browser does not support the video element. You can
-                    <a href="rescue-message_c.mp4">download the coordinator's message (MP4 video)</a>
-                    or <a href="rescue-message_c.mp3">the audio-only version (MP3)</a> to listen on your
-                    device. In the message, our rescue coordinator introduces the foster and volunteer
-                    programs and shares how community support helps animals find lasting homes.
-                </p>
-            </video>
-        </section>
+      <h2>Our Story</h2>
+      <p>Our organization was created to connect animals with caring people while building a stronger and more compassionate community.</p>
 
-        <section aria-labelledby="partners-heading">
-            <h2 id="partners-heading">Partner Acknowledgments</h2>
-            <p>
-                Our work would not be possible without the generosity of local organizations that share
-                our commitment to animal welfare. We are proud to recognize the partners who help us
-                rescue, care for, and rehome animals across the Twin Cities.
-            </p>
-            <ul>
-                <li><strong>Riverbend Veterinary Clinic</strong> &mdash; discounted medical care for rescued animals.</li>
-                <li><strong>Northstar Pet Supply</strong> &mdash; ongoing donations of food, bedding, and supplies.</li>
-                <li><strong>Saint Paul Community Foundation</strong> &mdash; grants supporting our foster program.</li>
-                <li><strong>Lakeshore Animal Hospital</strong> &mdash; emergency and surgical care for critical cases.</li>
-                <li><strong>Metro Transit Pet Partners</strong> &mdash; transport support for inter-shelter transfers.</li>
-                <li><strong>Friends of Minneapolis Shelters</strong> &mdash; collaborative adoption events and outreach.</li>
-            </ul>
-            <p>
-                We are deeply grateful to every volunteer, foster family, donor, and partner who makes
-                this work possible.
-            </p>
-        </section>
+      <section class="interactive-section">
+        <h2>How Would You Like to Help?</h2>
+        <p>Select an option to learn more about how you can make a difference.</p>
 
-        <section aria-labelledby="join-heading">
-            <h2 id="join-heading">Join Our Mission</h2>
-            <p>
-                If our story resonates with you, we would love to welcome you into our community.
-            </p>
-            <ul>
-                <li><a href="services.html">Explore our adoption, foster, and volunteer programs</a></li>
-                <li><a href="contact.html">Contact us to get involved</a></li>
-                <li><a href="index.html">Return to the homepage</a></li>
-            </ul>
-        </section>
-    </main>
+        <div class="interest-options">
+          <button class="interest-button" data-interest="adoption">Adopt an Animal</button>
+          <button class="interest-button" data-interest="foster">Become a Foster</button>
+          <button class="interest-button" data-interest="volunteer">Volunteer</button>
+          <button class="interest-button" data-interest="donate">Donate</button>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Twin Cities Animal Rescue. All rights reserved.</p>
-        <nav aria-label="Footer navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </footer>
+        <div id="interest-result" class="interest-result" aria-live="polite">
+          Choose an option above to get started.
+        </div>
+
+        <p id="saved-interest" class="saved-interest" aria-live="polite"></p>
+      </section>
+
+      <h2>Learn More</h2>
+      <video controls>
+        <source src="rescue-message_c.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+
+      <p><a href="rescue-message_c.mp3">Listen to our message</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Twin Cities Animal Rescue. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
